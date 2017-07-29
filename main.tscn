@@ -9,18 +9,105 @@
 
 [node name="Node" type="Node"]
 
-[node name="Control" type="Control" parent="."]
+[node name="TabContainer" type="TabContainer" parent="."]
 
 focus/ignore_mouse = false
 focus/stop_mouse = true
 size_flags/horizontal = 2
 size_flags/vertical = 2
-margin/left = 0.0
-margin/top = 0.0
-margin/right = 248.0
-margin/bottom = 600.0
+margin/left = 18.0
+margin/top = 67.0
+margin/right = 380.0
+margin/bottom = 328.0
+tab_align = 1
+tabs_visible = true
 
-[node name="Label" type="Label" parent="Control"]
+[node name="Control" type="Tabs" parent="TabContainer"]
+
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="KAN-01" parent="TabContainer/Control" instance=ExtResource( 1 )]
+
+transform/pos = Vector2( 424.639, 110.885 )
+mode = 1
+script/script = ExtResource( 2 )
+
+[node name="Tank" type="Tabs" parent="TabContainer"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="Frank-01" parent="TabContainer/Tank" instance=ExtResource( 3 )]
+
+transform/pos = Vector2( 422.563, 39.4463 )
+mode = 1
+script/script = ExtResource( 2 )
+
+[node name="Flight" type="Tabs" parent="TabContainer"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="X-Wing" parent="TabContainer/Flight" instance=ExtResource( 4 )]
+
+transform/pos = Vector2( 487.407, 170.754 )
+mode = 1
+script/script = ExtResource( 2 )
+
+[node name="Nosecone" parent="TabContainer/Flight" instance=ExtResource( 5 )]
+
+transform/pos = Vector2( 406.353, 168.593 )
+mode = 1
+script/script = ExtResource( 2 )
+
+[node name="Engine" type="Tabs" parent="TabContainer"]
+
+visibility/visible = false
+anchor/right = 1
+anchor/bottom = 1
+focus/ignore_mouse = false
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 2
+margin/left = 4.0
+margin/top = 32.0
+margin/right = 4.0
+margin/bottom = 4.0
+
+[node name="Yeezy-01" parent="TabContainer/Engine" instance=ExtResource( 6 )]
+
+transform/pos = Vector2( 467.413, 168.052 )
+mode = 1
+script/script = ExtResource( 2 )
+
+[node name="Label" type="Label" parent="."]
 
 focus/ignore_mouse = true
 focus/stop_mouse = true
@@ -34,103 +121,5 @@ text = "Part List"
 percent_visible = 1.0
 lines_skipped = 0
 max_lines_visible = -1
-
-[node name="TabContainer" type="TabContainer" parent="Control"]
-
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 18.0
-margin/top = 67.0
-margin/right = 380.0
-margin/bottom = 328.0
-tab_align = 1
-tabs_visible = true
-
-[node name="Control" type="Tabs" parent="Control/TabContainer"]
-
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-
-[node name="RigidBody2D" parent="Control/TabContainer/Control" instance=ExtResource( 1 )]
-
-transform/pos = Vector2( 424.639, 110.885 )
-mode = 1
-script/script = ExtResource( 2 )
-
-[node name="Tank" type="Tabs" parent="Control/TabContainer"]
-
-visibility/visible = false
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-
-[node name="Frank-01" parent="Control/TabContainer/Tank" instance=ExtResource( 3 )]
-
-transform/pos = Vector2( 422.563, 39.4463 )
-mode = 1
-script/script = ExtResource( 2 )
-
-[node name="Flight" type="Tabs" parent="Control/TabContainer"]
-
-visibility/visible = false
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-
-[node name="X-Wing" parent="Control/TabContainer/Flight" instance=ExtResource( 4 )]
-
-transform/pos = Vector2( 487.407, 170.754 )
-mode = 1
-script/script = ExtResource( 2 )
-
-[node name="Nosecone" parent="Control/TabContainer/Flight" instance=ExtResource( 5 )]
-
-transform/pos = Vector2( 406.353, 168.593 )
-mode = 1
-script/script = ExtResource( 2 )
-
-[node name="Engine" type="Tabs" parent="Control/TabContainer"]
-
-visibility/visible = false
-anchor/right = 1
-anchor/bottom = 1
-focus/ignore_mouse = false
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 2
-margin/left = 4.0
-margin/top = 32.0
-margin/right = 4.0
-margin/bottom = 4.0
-
-[node name="Yeezy-01" parent="Control/TabContainer/Engine" instance=ExtResource( 6 )]
-
-transform/pos = Vector2( 467.413, 168.052 )
-mode = 1
-script/script = ExtResource( 2 )
 
 
