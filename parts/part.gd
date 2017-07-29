@@ -7,6 +7,8 @@ var mouse_captured = false
 var object_dragged = false
 
 func _on_mouse_enter():
+	#if event.type == InputEvent.MOUSE_BUTTON:
+	#	print("something")
 	mouse_captured = true
 
 func _on_mouse_exit():
@@ -14,7 +16,6 @@ func _on_mouse_exit():
 
 func _ready():
 	set_pickable(true)
-	set_process(true)
 	set_process_unhandled_input(true)
 	# Connect object's mouse enter/exit signals
 	connect("mouse_enter", self, "_on_mouse_enter")
@@ -22,14 +23,9 @@ func _ready():
 
 # Escape to exit.
 func _unhandled_input(event):
-	if (event.type == 1) :
+	if (event.type == InputEvent.KEY) :
 		if (event.scancode == KEY_ESCAPE) :
 			get_tree().quit()
-	if event.type == InputEvent.MOUSE_BUTTON:
-		print("input handled")
-		get_tree().set_input_as_handled()
-
-func _process(delta):
 	if mouse_captured == true:
 		if Input.is_mouse_button_pressed(BUTTON_LEFT):
 			object_dragged = true
