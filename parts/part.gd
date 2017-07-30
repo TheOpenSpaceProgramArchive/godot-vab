@@ -1,6 +1,6 @@
 extends RigidBody2D
 
-# Is the mouse cursor touching the part?
+# Is the mouse pointer touching the part?
 var is_part_active = false
 
 func _on_mouse_enter():
