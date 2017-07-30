@@ -9,6 +9,21 @@
 
 [node name="Node" type="Node"]
 
+[node name="Label" type="Label" parent="."]
+
+focus/ignore_mouse = true
+focus/stop_mouse = true
+size_flags/horizontal = 2
+size_flags/vertical = 0
+margin/left = 37.0
+margin/top = 18.0
+margin/right = 89.0
+margin/bottom = 48.0
+text = "Part List"
+percent_visible = 1.0
+lines_skipped = 0
+max_lines_visible = -1
+
 [node name="TabContainer" type="TabContainer" parent="."]
 
 focus/ignore_mouse = false
@@ -106,20 +121,5 @@ margin/bottom = 4.0
 transform/pos = Vector2( 467.413, 168.052 )
 mode = 1
 script/script = ExtResource( 2 )
-
-[node name="Label" type="Label" parent="."]
-
-focus/ignore_mouse = true
-focus/stop_mouse = true
-size_flags/horizontal = 2
-size_flags/vertical = 0
-margin/left = 37.0
-margin/top = 18.0
-margin/right = 89.0
-margin/bottom = 48.0
-text = "Part List"
-percent_visible = 1.0
-lines_skipped = 0
-max_lines_visible = -1
 
 
