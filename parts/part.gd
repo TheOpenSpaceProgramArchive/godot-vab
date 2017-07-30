@@ -1,13 +1,13 @@
 extends RigidBody2D
 
 # Is the mouse pointer touching the part?
-var is_part_active = false
+var is_mouse_touching = false
 
 func _on_mouse_enter():
-	is_part_active = true
+	is_mouse_touching = true
 
 func _on_mouse_exit():
-	is_part_active = false
+	is_mouse_touching = false
 
 func _ready():
 	set_pickable(true)
@@ -16,6 +16,6 @@ func _ready():
 	set_process_unhandled_input(true)
 
 func _unhandled_input(event):
-	if is_part_active == true:
+	if is_mouse_touching == true:
 		if Input.is_mouse_button_pressed(BUTTON_LEFT):
 			set_global_pos(get_global_mouse_pos())
