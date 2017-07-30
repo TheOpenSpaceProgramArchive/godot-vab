@@ -8,4 +8,5 @@ extends Node
 func _ready():
 	# Called every time the node is added to the scene.
 	# Initialization here
-	get_node("Control").queue_free()
+	get_node("Label").queue_free()
+	get_node("TabContainer").queue_free()

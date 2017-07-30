@@ -10,6 +10,7 @@ func _on_mouse_exit():
 	is_mouse_touching = false
 
 func _ready():
+	set_mode(MODE_STATIC)
 	set_pickable(true)
 	connect("mouse_enter", self, "_on_mouse_enter")
 	connect("mouse_exit", self, "_on_mouse_exit")
