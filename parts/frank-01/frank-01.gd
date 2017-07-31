@@ -8,6 +8,3 @@ func _draw():
 	var to = Vector2(0.0, -ray_length) # px
 	var color = Color(1.0, 1.0, 1.0) # white
 	draw_line(from, to, color)
-
-func _ready():
-	print("whatever")

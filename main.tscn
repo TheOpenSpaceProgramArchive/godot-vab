@@ -10,7 +10,7 @@
 
 [node name="Frank-01" parent="." instance=ExtResource( 1 )]
 
-transform/pos = Vector2( 198.313, 182.102 )
+transform/pos = Vector2( 208.04, 211.822 )
 
 [node name="KAN-01" parent="." instance=ExtResource( 2 )]
 
@@ -18,14 +18,14 @@ transform/pos = Vector2( 149.14, 67.5453 )
 
 [node name="Nosecone" parent="." instance=ExtResource( 3 )]
 
-transform/pos = Vector2( 115.638, 114.557 )
+transform/pos = Vector2( 42.1487, 157.246 )
 
 [node name="X-Wing" parent="." instance=ExtResource( 4 )]
 
-transform/pos = Vector2( 210.201, 105.911 )
+transform/pos = Vector2( 74.57, 65.9242 )
 
 [node name="Yeezy-01" parent="." instance=ExtResource( 5 )]
 
-transform/pos = Vector2( 158.326, 128.606 )
+transform/pos = Vector2( 56.7379, 254.51 )
 
 

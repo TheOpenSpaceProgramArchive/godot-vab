@@ -53,7 +53,8 @@ type_mask = 15
 
 [node name="DownRay" type="RayCast2D" parent="."]
 
-enabled = false
+transform/pos = Vector2( 0, 3 )
+enabled = true
 cast_to = Vector2( 0, 50 )
 layer_mask = 1
 type_mask = 15

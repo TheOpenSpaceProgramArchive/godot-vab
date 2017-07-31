@@ -10,4 +10,13 @@ func _draw():
 	draw_line(from, to, color)
 
 func _ready():
-	print("whatever")
+	get_node("DownRay").add_exception(self)
+	set_process(true)
+
+func _process(delta):
+	if Input.is_mouse_button_pressed(BUTTON_LEFT):
+		pass
+	elif get_node("DownRay").is_colliding():
+		var potential_add = get_node("DownRay").get_collider()
+		potential_add.set_pos(Vector2(get_pos().x, get_pos().y + lowest_y_coord() - potential_add.highest_y_coord()))
+		print(get_item_rect())

@@ -47,14 +47,14 @@ trigger = false
 [node name="UpRay" type="RayCast2D" parent="."]
 
 enabled = false
-cast_to = Vector2( 0, 50 )
+cast_to = Vector2( 0, -100 )
 layer_mask = 1
 type_mask = 15
 
 [node name="DownRay" type="RayCast2D" parent="."]
 
 enabled = false
-cast_to = Vector2( 0, 50 )
+cast_to = Vector2( 0, 100 )
 layer_mask = 1
 type_mask = 15
 
