@@ -1,6 +1,6 @@
 [gd_scene load_steps=4 format=1]
 
-[ext_resource path="res://parts/part.gd" type="Script" id=1]
+[ext_resource path="res://parts/frank-01/frank-01.gd" type="Script" id=1]
 [ext_resource path="res://parts/frank-01/frank-01.png" type="Texture" id=2]
 
 [sub_resource type="ConvexPolygonShape2D" id=1]
@@ -43,5 +43,19 @@ build_mode = 0
 polygon = Vector2Array( 8, 49.5, -8, 49.5, -8, -49.5, 8, -49.5 )
 shape_range = Vector2( 0, 0 )
 trigger = false
+
+[node name="UpRay" type="RayCast2D" parent="."]
+
+enabled = false
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
+
+[node name="DownRay" type="RayCast2D" parent="."]
+
+enabled = false
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
 
 
