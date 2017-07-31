@@ -74,6 +74,7 @@ func _process(delta):
 	if Input.is_mouse_button_pressed(BUTTON_LEFT):
 		pass
 	elif get_node("DownRay").is_colliding():
-		print("colliding")
 		var potential_add = get_node("DownRay").get_collider()
 		potential_add.set_pos(Vector2(get_pos().x, get_pos().y + lowest_y_coord() - potential_add.highest_y_coord()))
+		get_node("PinJoint2D").set_node_a(self.get_path())
+		get_node("PinJoint2D").set_node_b(potential_add.get_path())

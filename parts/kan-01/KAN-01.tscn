@@ -52,4 +52,12 @@ cast_to = Vector2( 0, 50 )
 layer_mask = 1
 type_mask = 15
 
+[node name="PinJoint2D" type="PinJoint2D" parent="."]
+
+node_a = NodePath("")
+node_b = NodePath("")
+bias/bias = 0.0
+collision/exclude_nodes = true
+softness = 0.0
+
 
