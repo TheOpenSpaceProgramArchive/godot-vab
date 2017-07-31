@@ -68,4 +68,11 @@ polygon = Vector2Array( 8, 16.5, 7, 16.5, 7, 19.5, -7, 19.5, -7, 16.5, -8, 16.5,
 shape_range = Vector2( 0, 3 )
 trigger = false
 
+[node name="DownRay" type="RayCast2D" parent="."]
+
+enabled = false
+cast_to = Vector2( 0, 50 )
+layer_mask = 1
+type_mask = 15
+
 
