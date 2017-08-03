@@ -36,6 +36,14 @@ func _draw():
 	var color = Color(1.0, 1.0, 1.0)
 	draw_line(from, to, color)
 
+# Save the node positions.
+func save():
+	var savedict = {
+		posx=get_pos().x,
+		posy=get_pos().y
+	}
+	return savedict
+
 #################
 # Good Code Begin
 #################
